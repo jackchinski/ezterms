@@ -3,6 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
+import { addUserToFirebase } from "./testingFunctions/addToDB";
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
@@ -18,21 +19,10 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore();
 
+// now should run only once
 function App() {
   useEffect(() => {
-    (async () => {
-      try {
-        const docRef = await addDoc(collection(db, "users"), {
-          first: "Ada",
-          last: "Lovelace",
-          born: 1815,
-        });
-
-        console.log("Document writting with ID: ", docRef.id);
-      } catch (e) {
-        console.log("Error adding document", e);
-      }
-    })();
+    addUserToFirebase(db);
   }, []);
 
   return (
