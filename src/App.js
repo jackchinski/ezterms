@@ -1,9 +1,9 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 
 // Import the functions you need from the SDKs you need
-import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, addDoc } from 'firebase/firestore';
+import { initializeApp } from "firebase/app";
+import { getFirestore, collection, addDoc } from "firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -19,29 +19,26 @@ const firebaseConfig = {
   measurementId: process.env.REACT_APP_MEASUREMENT_ID,
 };
 
-// initialization 
+// initialization
 const app = initializeApp(firebaseConfig);
 const db = getFirestore();
 
-
-// do all of this in a useEffect so it only runs once 
+// do all of this in a useEffect so it only runs once
 const docRef = await addDoc(collection(db, "users"), {
-  first: "Ada", 
-  last: "Lovelace", 
-  born: 1815
-}); 
+  first: "Ada",
+  last: "Lovelace",
+  born: 1815,
+});
 
-console.log("Document writting with ID: ", docRef.id)
+console.log("Document writting with ID: ", docRef.id);
 
 const docRef2 = await addDoc(collection(db, "users"), {
-  first: "Marcin", 
-  last: "Jaczynski", 
-  born: 2000
-}); 
+  first: "Marcin",
+  last: "Jaczynski",
+  born: 2000,
+});
 
-console.log("Document writting with ID: ", docRef2.id)
-
-
+console.log("Document writting with ID: ", docRef2.id);
 
 function App() {
   return (
@@ -57,7 +54,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          EAT ASS
+          Test Text Update
         </a>
       </header>
     </div>
