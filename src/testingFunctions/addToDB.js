@@ -11,7 +11,7 @@ async function addUserToFirebase(db) {
     );
     console.log("Document added with ID: ", docRef.id);
   } catch (e) {
-    console.log("Failed with error: ", e);
+    console.log("addUserToFirebase: Failed with error: ", e);
   }
 }
 
