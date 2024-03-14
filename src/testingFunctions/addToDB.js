@@ -20,13 +20,8 @@ async function readUserFromFirebase(db) {
     const querySnapshot = await getDocs(collection(db, "sortedTerms"));
     console.log("====DOCUMENT RETRIEVED FROM DB====");
     querySnapshot.forEach((doc) => {
-      console.log(`${doc.id} => ${doc.data()}`);
+      console.log(`${doc.id} => ${JSON.stringify(doc.data(), null, 2)}`);
     });
-
-
-    //
-      
-    //
   } catch (e) {
     console.log("error: ", e);
   }
