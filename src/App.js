@@ -1,35 +1,27 @@
-import React, { useState, useEffect } from "react";
-import { fetchDataFirestore } from './data/sortedTerms.js';
-
+import React from "react";
+import Schema01 from "./includes/Schema01";
+import Schema02 from "./includes/Schema02";
+import Schema03 from "./includes/Schema03";
 
 function App() {
-  const [userData, setUserData] = useState(null);
-
-  useEffect(() => {
-    async function fetchData() {
-      const data = await fetchDataFirestore();
-      setUserData(data);
-    }
-    fetchData();
-  }, []);
-
   return (
-    <div>
+    <>
       <h1>Data from Firebase Firestore</h1>
-      {userData && (
-        <div key={userData.id}>
-          <h2>{userData.name}</h2>
-          {Object.keys(userData.flags).map((key) => (
-            <div key={key}>
-              <h3>{key}</h3>
-              {userData.flags[key].map((item, index) => (
-                <p key={index}>{item}</p>
-              ))}
-            </div>
-          ))}
-        </div>
-      )}
-    </div>
+      <h2>Collection: sortedTerms</h2>
+      <hr/>
+
+      <h3>Schema 01</h3>
+      <Schema01 />
+      <hr/>
+
+      <h3>Schema 02</h3>
+      <Schema02 />
+      <hr/>
+
+      <h3>Schema 03</h3>
+      <Schema03 />
+      <hr/>
+    </>
   );
 }
 
