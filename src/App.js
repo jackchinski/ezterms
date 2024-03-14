@@ -1,18 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { collection, getDocs } from "firebase/firestore";
-import { db } from "./firebase.config";
+import { fetchDataFirestore } from './data/sortedTerms.js';
 
-async function fetchDataFirestore() {
-  const querySnapshot = await getDocs(collection(db, "sortedTerms"));
-  const data = [];
-  querySnapshot.forEach((doc) => {
-    data.push({ id: doc.id, ...doc.data() });
-  });
-  return data;
-}
 
 function App() {
-  const [userData, setUserData] = useState([]);
+  const [userData, setUserData] = useState(null);
 
   useEffect(() => {
     async function fetchData() {
@@ -25,19 +16,19 @@ function App() {
   return (
     <div>
       <h1>Data from Firebase Firestore</h1>
-      {userData.map((terms) => (
-        <div key={terms.id}>
-          <h2>{terms.name}</h2>
-          {Object.keys(terms.flags).map((key) => (
+      {userData && (
+        <div key={userData.id}>
+          <h2>{userData.name}</h2>
+          {Object.keys(userData.flags).map((key) => (
             <div key={key}>
               <h3>{key}</h3>
-              {terms.flags[key].map((item, index) => (
+              {userData.flags[key].map((item, index) => (
                 <p key={index}>{item}</p>
               ))}
             </div>
           ))}
         </div>
-      ))}
+      )}
     </div>
   );
 }
