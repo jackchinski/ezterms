@@ -1,12 +1,32 @@
 import React from "react";
-import Schema01 from "./includes/Schema01";
-import Schema02 from "./includes/Schema02";
-import Schema03 from "./includes/Schema03";
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
+import Header from './includes/components/header';
+
+import Home from './includes/pages/Home';
+import About from './includes/pages/About';
+import PasteTOS from './includes/pages/PasteTOS';
+import Request from './includes/pages/Request';
+import NoPage from './includes/pages/NoPage';
+
+// import Schema01 from "./includes/Schema01";
+// import Schema02 from "./includes/Schema02";
+// import Schema03 from "./includes/Schema03";
 
 function App() {
   return (
-    <>
-      <h1>Data from Firebase Firestore</h1>
+    <BrowserRouter>
+      <div>
+        <Header />
+        <Routes>
+          <Route index path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/paste-tos" element={<PasteTOS />} />
+          <Route path="/request" element={<Request />} />
+          <Route path="*" element={<NoPage />} />
+        </Routes>
+      
+      {/* <h1>Data from Firebase Firestore</h1>
       <h2>Collection: sortedTerms</h2>
       <hr/>
 
@@ -20,8 +40,10 @@ function App() {
 
       <h3>Schema 03</h3>
       <Schema03 />
-      <hr/>
-    </>
+      <hr/> */}
+
+      </div>
+    </BrowserRouter>
   );
 }
 
