@@ -1,17 +1,23 @@
-import NavBar from "./NavBar";
+import NavBar from "./navBar";
 import { Link } from "react-router-dom";
+
+import "../css/header.css";
+
 import logo from "../assets/logo-01.png";
+
 
 const Header = () => {
   return (
       <>
       <header>
-        <div className="logo-container">
-            <Link className="img-link" to="/">
-                <img src={logo} alt="Easy Terms logo" width="50px"/>
-            </Link>
+        <div className="nav-container">
+          <div className="logo-container">
+              <Link className="img-link" to="/">
+                  <img src={logo} alt="Easy Terms logo" width="50px"/>
+              </Link>
+          </div>
+          <NavBar />
         </div>
-        <NavBar />
       </header>
     </>
   );
