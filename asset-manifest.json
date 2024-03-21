@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/ezterms/static/css/main.bb484a08.css",
+    "main.js": "/ezterms/static/js/main.9b613789.js",
+    "static/js/453.f548a448.chunk.js": "/ezterms/static/js/453.f548a448.chunk.js",
+    "static/media/homepage-art-01.png": "/ezterms/static/media/homepage-art-01.573dc33e8a9ce433a781.png",
+    "static/media/logo-01.png": "/ezterms/static/media/logo-01.c5332f2d11109e1ef073.png",
+    "index.html": "/ezterms/index.html",
+    "main.bb484a08.css.map": "/ezterms/static/css/main.bb484a08.css.map",
+    "main.9b613789.js.map": "/ezterms/static/js/main.9b613789.js.map",
+    "453.f548a448.chunk.js.map": "/ezterms/static/js/453.f548a448.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bb484a08.css",
+    "static/js/main.9b613789.js"
+  ]
+}
