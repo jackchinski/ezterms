@@ -1,6 +1,8 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
+import "./App.css";
+
 import Header from './includes/components/header';
 
 import Home from './includes/pages/Home';
@@ -16,7 +18,7 @@ import NoPage from './includes/pages/NoPage';
 function App() {
   return (
     <BrowserRouter>
-      <div>
+      <div className="main-container">
         <Header />
         <Routes>
           <Route index path="/" element={<Home />} />

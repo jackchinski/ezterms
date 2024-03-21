@@ -1,0 +1,18 @@
+/* Will work for all the sections within the homepage */
+/* hero */
+/* supportedPlatforms */
+
+main {
+  width: 95vw;
+  margin: auto;
+}
+
+#hero {
+    display: flex;
+    align-items: flex-end;
+    padding: 5rem 0;
+}
+
+#hero img {
+    display: block;
+}
