@@ -1,4 +1,25 @@
-section {
+#NoPage {
+    text-align: center;
+}
+
+.container-outer {
+    display: flex;
+    flex-direction: column;
+}
+
+.inner-container {
     width: 80vw;
     margin: auto;
+}
+
+section {
+    padding: 4rem 0;
+}
+
+/* Tablet (768px) */
+@media screen and (max-width: 768px) {
+    .inner-container {
+        width: unset;
+        padding: 0 1rem;
+    }
 }

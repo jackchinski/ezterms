@@ -1,57 +1,114 @@
 /* Will work for all the sections within the homepage */
-/* hero */
-/* supportedPlatforms */
-
-main {
-  width: 95vw;
-  margin: auto;
+/* Hero section */
+/* SupportedPlatforms section */
+/* ClassificationSystem section */
+/* SubmitRequest section */
+#Hero {
+  padding: 5rem 0;
 }
 
-#hero {
-    display: flex;
-    align-items: flex-end;
-    padding: 5rem 0;
+#Hero .hero-flex {
+  display: flex;
+  align-items: flex-end;
 }
 
-#hero img {
-    display: block;
+#Hero h1 {
+  font-size: 3rem;
+}
+
+#Hero img {
+  display: block;
+}
+
+#SupportedPlatforms,
+#SubmitRequest {
+  background-color: #bae5f7;
 }
 
 .platform-grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr); /* Default: 6 columns */
-    gap: 20px;
-  }
-  
-  /* Tablet (768px) */
-  @media screen and (max-width: 768px) {
-    .platform-grid {
-      grid-template-columns: repeat(4, 1fr); /* 4 columns on tablet */
-    }
-  }
-  
-  /* Mobile (576px) */
-  @media screen and (max-width: 576px) {
-    .platform-grid {
-      grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
-    }
-  }
-  
-  /* Style for grid items */
-  .grid-item {
-    display: flex;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-item img {
+  max-width: 75%;
+  height: auto;
+}
+
+.grid-item h5 {
+  margin-top: 10px;
+  text-align: center;
+}
+
+#ClassificationSystem h5 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.classification-categories-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  text-align: center;
+}
+
+.classification-categories-container > div {
+  padding: 1.5rem 1rem;
+  border-radius: 20px;
+}
+
+.classification-danger {
+  background-color: #f67373;
+}
+
+.classification-caution {
+  background-color: #ffde69;
+}
+
+.classification-safe {
+  background-color: #8cdd7a;
+}
+
+#SubmitRequest {
+  text-align: center;
+}
+
+#SubmitRequest button {
+  background-color: #01283e;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+/* Tablet (768px) */
+@media screen and (max-width: 768px) {
+  #Hero .hero-flex {
     flex-direction: column;
     align-items: center;
-    justify-content: center;
   }
-  
-  .grid-item img {
-    max-width: 75%;
-    height: auto;
+  .platform-grid {
+    grid-template-columns: repeat(4, 1fr);
   }
-  
-  .grid-item h5 {
-    margin-top: 10px;
-    text-align: center;
+}
+
+/* Mobile (576px) */
+@media screen and (max-width: 576px) {
+  .platform-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
-  
+  .classification-categories-container {
+    grid-template-columns: 1fr;
+  }
+}

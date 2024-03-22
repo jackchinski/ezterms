@@ -1,12 +1,13 @@
 import { React } from "react";
 
 import "../css/comingSoon.css";
+import "../../App.css";
 
 const ComingSoon = () => {
   return (
     <>
       <div class="warning-content">
-        <h1>Application Under Construction</h1>
+        <h1>Page Under Construction</h1>
         <svg
           version="1.1"
           xmlns="http://www.w3.org/2000/svg"
