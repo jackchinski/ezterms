@@ -8,11 +8,12 @@ import Pinterest from "../assets/icons/Pinterest.png";
 import Shopify from "../assets/icons/Shopify.png";
 import Snapchat from "../assets/icons/Snapchat.png";
 import Telegram from "../assets/icons/Telegram.png";
-import Ticktok from "../assets/icons/Ticktok.png";
+import Tiktok from "../assets/icons/Tiktok.png";
 import Wix from "../assets/icons/Wix.png";
 import X from "../assets/icons/X.png";
 
 import "../css/home.css";
+import "../../App.css";
 
 const SupportedPlatforms = () => {
   const platformImages = {
@@ -25,7 +26,7 @@ const SupportedPlatforms = () => {
     Shopify,
     Snapchat,
     Telegram,
-    Ticktok,
+    Tiktok,
     Wix,
     X,
   };
@@ -33,14 +34,16 @@ const SupportedPlatforms = () => {
   return (
     <>
       <section id="SupportedPlatforms">
-        <h1>Supported Platforms</h1>
-        <div className="platform-grid">
-          {Object.entries(platformImages).map(([platform, imageSrc], index) => (
-            <div className="grid-item" key={index}>
-              <img src={imageSrc} alt={platform} />
-              <h5>{platform}</h5>
+        <div className="inner-container">
+            <h1>Supported Platforms</h1>
+            <div className="platform-grid">
+            {Object.entries(platformImages).map(([platform, imageSrc], index) => (
+                <div className="grid-item" key={index}>
+                <img src={imageSrc} alt={platform} />
+                <h5>{platform}</h5>
+                </div>
+            ))}
             </div>
-          ))}
         </div>
       </section>
     </>

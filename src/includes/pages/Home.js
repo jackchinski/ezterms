@@ -2,15 +2,22 @@ import React from "react";
 
 import SupportedPlatforms from '../sections/supportedPlatforms';
 import Hero from '../sections/hero';
+import ClassificationSystem from '../sections/classificationSystem';
+import SubmitRequest from '../sections/submitRequest';
+import Footer from '../sections/footer';
 
 import "../css/home.css";
+import "../../App.css";
 
 const Home = () => {
   return (
     <>
-      <main>
+      <main className="container-outer">
         <Hero />
         <SupportedPlatforms />
+        <ClassificationSystem />
+        <SubmitRequest />
+        <Footer />
       </main>
     </>
   );
