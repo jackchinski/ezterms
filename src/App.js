@@ -11,7 +11,7 @@ import PasteTOS from './includes/pages/PasteTOS';
 import Request from './includes/pages/Request';
 import NoPage from './includes/pages/NoPage';
 
-import Page0 from "./includes/pages/terms/Page0";
+import TermsPage from "./includes/pages/terms/termsPage";
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/paste-tos" element={<PasteTOS />} />
           <Route path="/request" element={<Request />} />
-          <Route path="/terms/:pageName" element={<Page0 />} /> {/* /terms: termsId */}
+          <Route path="/terms/:pageName" element={<TermsPage />} /> {/* /terms: termsId */}
           <Route path="*" element={<NoPage />} />
         </Routes>
 
