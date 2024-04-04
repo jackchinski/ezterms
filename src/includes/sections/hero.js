@@ -3,7 +3,7 @@ import React from "react";
 import "../css/home.css";
 import "../../App.css";
 
-import heroImg from "../assets/homepage-art-01.png";
+import heroImg from "../../assets/homepage-art-01.png";
 
 const Hero = () => {
   return (

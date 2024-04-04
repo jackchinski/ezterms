@@ -1,16 +1,16 @@
 import React from "react";
-import Amazon from "../assets/icons/Amazon.png";
-import BeReal from "../assets/icons/BeReal.png";
-import Etsy from "../assets/icons/Etsy.png";
-import Instagram from "../assets/icons/Instagram.png";
-import LinkedIn from "../assets/icons/LinkedIn.png";
-import Pinterest from "../assets/icons/Pinterest.png";
-import Shopify from "../assets/icons/Shopify.png";
-import Snapchat from "../assets/icons/Snapchat.png";
-import Telegram from "../assets/icons/Telegram.png";
-import Tiktok from "../assets/icons/Tiktok.png";
-import Wix from "../assets/icons/Wix.png";
-import X from "../assets/icons/X.png";
+import Amazon from "../../assets/icons/Amazon.png";
+import BeReal from "../../assets/icons/BeReal.png";
+import Etsy from "../../assets/icons/Etsy.png";
+import Instagram from "../../assets/icons/Instagram.png";
+import LinkedIn from "../../assets/icons/LinkedIn.png";
+import Pinterest from "../../assets/icons/Pinterest.png";
+import Shopify from "../../assets/icons/Shopify.png";
+import Snapchat from "../../assets/icons/Snapchat.png";
+import Telegram from "../../assets/icons/Telegram.png";
+import Tiktok from "../../assets/icons/Tiktok.png";
+import Wix from "../../assets/icons/Wix.png";
+import X from "../../assets/icons/X.png";
 
 import "../css/home.css";
 import "../../App.css";

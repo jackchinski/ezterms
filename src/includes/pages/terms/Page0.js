@@ -17,12 +17,12 @@ function Page0() {
   }, []);
 
   if (!userData) {
-    // Data is not yet fetched, return a loading indicator or null
     return null;
   }
 
   return (
     <div>
+      <h1>{userData.nameId}</h1>
       <h2>{userData.sectionHeading}</h2>
       <p>Description: {userData.description}</p>
       <p>Update Info: {userData.updateInfo}</p>
@@ -56,7 +56,11 @@ function Page0() {
           </li>
         ))}
       </ul>
-      <img src={userData.assetRef} alt="Asset" />
+      {userData.assetRef && (
+        <div>
+        <img src={`${process.env.PUBLIC_URL}/${userData.assetRef}`} alt={`${userData.assetRef} Icon`} />
+      </div>
+      )}
     </div>
   );
 }
