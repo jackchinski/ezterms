@@ -26,6 +26,6 @@ async function fetchDataFirestore() {
 // Export each item separately
 export const backendTerms = async () => {
   const data = await fetchDataFirestore();
-  return data[3];
+  return data;
 };
 

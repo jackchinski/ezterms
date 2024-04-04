@@ -23,7 +23,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/paste-tos" element={<PasteTOS />} />
           <Route path="/request" element={<Request />} />
-          <Route path="/testing-page" element={<Page0 />} /> {/* /terms: termsId */}
+          <Route path="/terms/:pageName" element={<Page0 />} /> {/* /terms: termsId */}
           <Route path="*" element={<NoPage />} />
         </Routes>
 
