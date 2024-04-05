@@ -4,7 +4,7 @@
 /* ClassificationSystem section */
 /* SubmitRequest section */
 #Hero {
-  padding: 5rem 0;
+  padding: 2rem 0;
 }
 
 #Hero .hero-flex {
@@ -13,11 +13,12 @@
 }
 
 #Hero h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
-#Hero img {
+#hero-img {
   display: block;
+  width: calc(220px + 10vw);
 }
 
 #SupportedPlatforms,
@@ -28,7 +29,15 @@
 .platform-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: 20px;
+  gap: 10px;
+}
+
+.platform-grid .grid-item {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 3px 3px 1px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  padding: 0.5rem;
 }
 
 .grid-item {
@@ -39,8 +48,9 @@
 }
 
 .grid-item img {
-  max-width: 75%;
+  max-width: 80%;
   height: auto;
+  object-fit: contain;
 }
 
 .grid-item h5 {
@@ -111,4 +121,6 @@
   .classification-categories-container {
     grid-template-columns: 1fr;
   }
+
 }
+

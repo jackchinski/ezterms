@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import Amazon from "../../assets/icons/Amazon.png";
 import BeReal from "../../assets/icons/BeReal.png";
 import Etsy from "../../assets/icons/Etsy.png";
@@ -35,15 +37,20 @@ const SupportedPlatforms = () => {
     <>
       <section id="SupportedPlatforms">
         <div className="inner-container">
-            <h1>Supported Platforms</h1>
-            <div className="platform-grid">
-            {Object.entries(platformImages).map(([platform, imageSrc], index) => (
-                <div className="grid-item" key={index}>
-                <img src={imageSrc} alt={platform} />
-                <h5>{platform}</h5>
-                </div>
-            ))}
-            </div>
+          <h1>Supported Platforms</h1>
+          <div className="platform-grid">
+            {Object.entries(platformImages).map(
+              ([platform, imageSrc], index) => (
+                <Link className="platform-link" to={`terms/${platform.toLowerCase()}`}>
+                  {" "}
+                  <div className="grid-item" key={index}>
+                    <img src={imageSrc} alt={platform} />
+                    <h5>{platform}</h5>
+                  </div>
+                </Link>
+              )
+            )}
+          </div>
         </div>
       </section>
     </>

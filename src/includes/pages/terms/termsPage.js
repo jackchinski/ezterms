@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { backendTerms } from "../../../data/backendTerms";
+import NoPage from "../../../includes/pages/NoPage";
+
+import "../../css/termsPage.css";
 
 function TermsPage() {
   const { pageName } = useParams();
@@ -25,11 +29,21 @@ function TermsPage() {
   const currentPage = termsPage.find((page) => page.nameId === pageName);
 
   if (!currentPage) {
-    return <div>Page not found</div>;
+    return (
+      <div className="inner-container">
+        <Link to="/" className="back-link">
+          back to home
+        </Link>
+        <NoPage />
+      </div>
+    );
   }
 
   return (
-    <div>
+    <div className="inner-container">
+      <Link to="/" className="back-link">
+        back to home
+      </Link>
       <h1>{currentPage.nameId}</h1>
       {currentPage.assetRef ? (
         <div>
@@ -41,10 +55,18 @@ function TermsPage() {
       ) : (
         <p>Your icon asset reference does not exist</p>
       )}
-      <p>Description: {currentPage.description || "Page description does not exist"}</p>
-      <p>Update Info: {currentPage.updateInfo || "Page update Info does not exist"}</p>
-      <section>
-        <h2>{currentPage.sectionHeading || "Page section heading does not exist"}</h2>
+      <p>
+        Description:{" "}
+        {currentPage.description || "Page description does not exist"}
+      </p>
+      <p>
+        Update Info:{" "}
+        {currentPage.updateInfo || "Page update Info does not exist"}
+      </p>
+      <div>
+        <h2>
+          {currentPage.sectionHeading || "Page section heading does not exist"}
+        </h2>
         <h3>Danger</h3>
         <ul>
           {currentPage.Danger.map((dangerItem, index) => (
@@ -75,7 +97,7 @@ function TermsPage() {
             </li>
           ))}
         </ul>
-      </section>
+      </div>
     </div>
   );
 }
