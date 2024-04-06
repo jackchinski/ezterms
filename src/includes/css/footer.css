@@ -1,0 +1,16 @@
+footer {
+  background: #01283e;
+  text-align: center;
+  color: white;
+  padding: 2rem;
+}
+
+footer nav ul {
+  justify-content: center;
+  padding: 1rem;
+}
+
+footer nav li:not(:last-child)::after {
+  content: "|";
+  margin-left: 1rem;
+}

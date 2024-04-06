@@ -1,0 +1,10 @@
+/* Will work for all the terms pages such as terms/amazon, terms/linkedin */
+.back-link {
+  display: block;
+  padding: 0.5rem 0;
+}
+
+.platform-link {
+  text-decoration: none;
+  color: inherit;
+}
