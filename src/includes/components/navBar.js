@@ -9,7 +9,6 @@ const Navbar = () => {
     <nav>
       <ul>
         <li><Link to="/">Home</Link></li>
-        {/* This link to Supported Platforms will only work  */}
         {location.pathname === "/" && (
           <li><AnchorLink href="#SupportedPlatforms">Supported Platforms</AnchorLink></li>
         )}
