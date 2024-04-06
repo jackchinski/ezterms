@@ -26,6 +26,11 @@
   background-color: #bae5f7;
 }
 
+#SupportedPlatforms h5 {
+  padding: 0.5rem;
+  margin: 0;
+}
+
 .platform-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
