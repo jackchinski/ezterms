@@ -6,7 +6,6 @@ import "./App.css";
 import Header from './includes/components/header';
 
 import Home from './includes/pages/Home';
-import About from './includes/pages/About';
 import PasteTOS from './includes/pages/PasteTOS';
 import Request from './includes/pages/Request';
 import NoPage from './includes/pages/NoPage';
@@ -20,7 +19,6 @@ function App() {
         <Header />
         <Routes>
           <Route index path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
           <Route path="/paste-tos" element={<PasteTOS />} />
           <Route path="/request" element={<Request />} />
           <Route path="/terms/:pageName" element={<TermsPage />} />
