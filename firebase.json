@@ -10,6 +10,10 @@
       {
         "source": "**",
         "destination": "/index.html"
+      },
+      {
+        "source": "/terms/:pageName",
+        "destination": "/index.html"
       }
     ]
   }
