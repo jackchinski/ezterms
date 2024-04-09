@@ -24,7 +24,6 @@ function App() {
           <Route path="/terms/:pageName" element={<TermsPage />} />
           <Route path="*" element={<NoPage />} />
         </Routes>
-
       </div>
     </BrowserRouter>
   );
