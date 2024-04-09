@@ -21,7 +21,7 @@ function App() {
           <Route index path="/" element={<Home />} />
           <Route path="/paste-tos" element={<PasteTOS />} />
           <Route path="/request" element={<Request />} />
-          <Route path="/terms/:pageName" element={<TermsPage />} />
+          <Route path="/:pageName" element={<TermsPage />} />
           <Route path="*" element={<NoPage />} />
         </Routes>
       </div>
