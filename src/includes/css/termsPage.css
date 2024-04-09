@@ -8,3 +8,20 @@
   text-decoration: none;
   color: inherit;
 }
+
+#terms-hero {
+  background-color: #D8F0FA;
+}
+
+.clause-container, .clause-header{
+  display: flex;
+  align-items: center;
+}
+
+.clause-box{
+  padding: 1rem;
+}
+
+.clause-header{
+justify-content: space-between;
+}
