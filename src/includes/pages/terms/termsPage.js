@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { backendTerms } from "../../../data/backendTerms";
+
 import NoPage from "../../../includes/pages/NoPage";
 
 import { AiOutlineWarning, AiOutlineSafety } from "react-icons/ai";
