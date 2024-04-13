@@ -34,7 +34,7 @@ Know before you sign! EzTerms is an online platform that helps users understand 
 ![Info architecture diagram](https://i.imgur.com/M5TkWB0.png)
 
 ## Front End 
-
+![Front-end diagram](https://i.imgur.com/V5SxxZk.png)
 
 
 
