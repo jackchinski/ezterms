@@ -12,14 +12,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: npm i && npm run build
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'  # or the version you need
-      - name: Install dependencies
-        run: npm install
-      - name: Build
-        run: npm run build
         env:
           REACT_APP_API_KEY: ${{ secrets.REACT_APP_API_KEY }}
           REACT_APP_AUTH_DOMAIN: ${{ secrets.REACT_APP_AUTH_DOMAIN }}
