@@ -87,16 +87,16 @@ function TermsPage() {
                 />
               </div>
             ) : (
-              <p>Your icon asset reference does not exist</p>
+              <p>Your icon asset reference does not exist. Add 'assetRef' field for this page.</p>
             )}
           </div>
           <div className="description-box flex-item">
             <p>
-              {currentPage.description || "Page description does not exist"}
+              {currentPage.description || "Page description does not exist. Add 'description' field for this page."}
             </p>
             <p>
               <strong>
-                {currentPage.updateInfo || "Page update Info does not exist"}
+                {currentPage.updateInfo || "Page update Info does not exist. Add 'updateInfo' field for this page."}
               </strong>
             </p>
           </div>

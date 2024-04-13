@@ -47,7 +47,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 120px;
+  height: 150px;
 }
 
 .grid-item img {
@@ -113,9 +113,6 @@
   }
   .platform-grid {
     grid-template-columns: repeat(4, 1fr);
-  }
-  .platform-grid .grid-item {
-    height: 150px;
   }
 }
 
