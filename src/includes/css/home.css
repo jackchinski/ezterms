@@ -43,13 +43,11 @@
   box-shadow: 0 3px 3px 1px rgba(0, 0, 0, 0.25);
   overflow: hidden;
   padding: 1rem;
-}
-
-.grid-item {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 120px;
 }
 
 .grid-item img {
@@ -115,6 +113,9 @@
   }
   .platform-grid {
     grid-template-columns: repeat(4, 1fr);
+  }
+  .platform-grid .grid-item {
+    height: 150px;
   }
 }
 

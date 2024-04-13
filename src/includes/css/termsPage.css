@@ -122,7 +122,7 @@
 .Caution .clause-box {
   background-color: rgba(255, 218, 89, 0.2); 
 }
-.Safe .clause-box {
+.Safety .clause-box {
   background-color: rgba(107, 191, 89, 0.2); 
 }
 .Danger .clause-icon svg {
@@ -131,7 +131,7 @@
 .Caution .clause-icon svg {
   color: rgba(197, 142, 89, 1); 
 }
-.Safe .clause-icon svg {
+.Safety .clause-icon svg {
   color: rgba(14, 139, 79, 1); 
 }
 .Danger .clause-object-heading {
@@ -140,7 +140,7 @@
 .Caution .clause-object-heading {
   background-color: rgba(255, 218, 89, 0.5); 
 }
-.Safe .clause-object-heading {
+.Safety .clause-object-heading {
   background-color: rgba(107, 191, 89, 0.5); 
 }
 .Danger .section-clauses {
@@ -149,7 +149,7 @@
 .Caution .section-clauses {
   background-color: rgba(255, 218, 89, 0.1); 
 }
-.Safe .section-clauses {
+.Safety .section-clauses {
   background-color: rgba(107, 191, 89, 0.1); 
 }
 

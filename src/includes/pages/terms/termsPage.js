@@ -33,19 +33,22 @@ function TermsPage() {
 
   const currentPage = termsPage.find((page) => page.nameId === pageName);
 
-  const order = ["Danger", "Caution", "Safe"];
-
-  const pageObjectKeys = Object.keys(currentPage)
-    .filter((key) => typeof currentPage[key] === "object")
-    .sort((a, b) => order.indexOf(a) - order.indexOf(b));
-
   if (!currentPage) {
     return (
       <div className="inner-container">
         <NoPage />
+        <p style={{ textAlign: "center" }}>
+          Only processed pages with ID values will show up here.
+        </p>
       </div>
     );
   }
+
+  const order = ["Danger", "Caution", "Safety"];
+
+  const pageObjectKeys = Object.keys(currentPage)
+    .filter((key) => typeof currentPage[key] === "object")
+    .sort((a, b) => order.indexOf(a) - order.indexOf(b));
 
   const toTitleCase = (str) => {
     return str.toLowerCase().replace(/\b\w/g, (char) => char.toUpperCase());
@@ -57,7 +60,7 @@ function TermsPage() {
         return <AiOutlineWarning />;
       case "Caution":
         return <LuConstruction />;
-      case "Safe":
+      case "Safety":
         return <AiOutlineSafety />;
       default:
         return null;
@@ -102,7 +105,9 @@ function TermsPage() {
 
       <div className="inner-container">
         <div id="clauses">
-          <h2>{toTitleCase(currentPage.nameId)} – Know what you're signing: </h2>
+          <h2>
+            {toTitleCase(currentPage.nameId)} – Know what you're signing:{" "}
+          </h2>
           {pageObjectKeys.map((key, index) => (
             <section key={index} className={key + " clause-section"}>
               <div
@@ -120,7 +125,10 @@ function TermsPage() {
                 </div>
               </div>
               {expandedSections[key] && (
-                <div className="section-clauses" style={{ maxHeight: "300px", overflowY: "auto" }}>
+                <div
+                  className="section-clauses"
+                  style={{ maxHeight: "300px", overflowY: "auto" }}
+                >
                   {currentPage[key].map((item, itemIndex) => (
                     <div key={itemIndex} className="clause-container">
                       <p className="clause-count">{itemIndex + 1}</p>

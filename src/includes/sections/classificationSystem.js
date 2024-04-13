@@ -19,7 +19,7 @@ const classificationSystem = () => {
                     <p>Covers functionalities that enhance user experience but involve significant data collection, necessitating awareness and careful management of privacy settings.</p>
                 </div>
                 <div className="classification-safe">
-                    <h5>Safe</h5>
+                    <h5>Safety</h5>
                     <p>Involves basic interactions that are inherent to the platform's use, where users maintain a degree of control over their data. </p>
                 </div>
             </div>
