@@ -41,9 +41,12 @@ const SupportedPlatforms = () => {
           <div className="platform-grid">
             {Object.entries(platformImages).map(
               ([platform, imageSrc], index) => (
-                <Link className="platform-link" to={`${platform.toLowerCase()}`}>
-                  {" "}
-                  <div className="grid-item" key={index}>
+                <Link
+                  className="platform-link"
+                  to={`${platform.toLowerCase()}`}
+                  key={index}
+                >
+                  <div className="grid-item">
                     <img src={imageSrc} alt={platform} />
                     <h5>{platform}</h5>
                   </div>

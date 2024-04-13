@@ -3,7 +3,7 @@ import { db } from "../firebase.config";
 
 async function fetchDataFirestore() {
   try {
-    const querySnapshot = await getDocs(collection(db, "backend-test"));
+    const querySnapshot = await getDocs(collection(db, "finalTerms"));
     
     if (querySnapshot.empty) {
       console.log("No documents found.");
@@ -15,7 +15,6 @@ async function fetchDataFirestore() {
       data.push(doc.data());
     });
 
-    console.log("All documents data:", data);
     return data;
   } catch (error) {
     console.error("Error fetching data from Firestore:", error);

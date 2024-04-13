@@ -13,7 +13,6 @@ const Home = () => {
   return (
     <>
       <main className="container-outer">
-        <p>Hello there!!!!</p>
         <Hero />
         <SupportedPlatforms />
         <ClassificationSystem />
