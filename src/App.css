@@ -7,7 +7,7 @@ body {
 }
 
 p {
-    font-size: calc(0.9rem + 0.3vw);
+    font-size: calc(1.2rem + 0.1vw);
 }
 
 .container-outer {
@@ -31,9 +31,9 @@ section {
         padding: 0 1rem;
     }
     .main-container h1, #Hero h1 {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
     .main-container h5, #ClassificationSystem h5, #SupportedPlatforms h5 {
-        font-size: 1rem !important;
+        font-size: 1.25rem;
     }
 }
