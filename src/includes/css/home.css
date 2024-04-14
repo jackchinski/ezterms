@@ -12,7 +12,7 @@
   align-items: flex-end;
 }
 
-#Hero h1 {
+.hero-flex h1 {
   font-size: 2.5rem;
 }
 
