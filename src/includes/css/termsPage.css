@@ -158,4 +158,7 @@
   #terms-hero .flex-container {
     flex-direction: column;
   }
+  #terms-hero .icon-box {
+    padding: 1rem;
+  }
 }
