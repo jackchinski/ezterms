@@ -16,6 +16,7 @@ const Header = () => {
               <Link className="img-link" to="/">
                   <img src={logo} alt="Easy Terms logo" width="60px"/>
               </Link>
+              <h1>Ez Terms</h1>
           </div>
           <NavBar />
         </div>

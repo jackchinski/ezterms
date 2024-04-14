@@ -10,7 +10,14 @@ footer nav ul {
   padding: 1rem;
 }
 
-footer nav li:not(:last-child)::after {
-  content: "|";
-  margin-left: 1rem;
+@media screen and (min-width: 576px) {
+  footer nav li:not(:last-child)::after {
+    content: "|";
+    margin-left: 1rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  #Footer nav ul {
+    flex-direction: column;
+  }
 }

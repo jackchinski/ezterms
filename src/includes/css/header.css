@@ -16,6 +16,7 @@ nav ul {
 
 nav li {
     padding: 0.25rem 0.75rem;
+    text-align: center;
 }
 
 .nav-container {
@@ -26,6 +27,13 @@ nav li {
 
 .logo-container {
     padding: 2rem 0.25rem 0.25rem 0.25rem;
+    display: flex;
+}
+
+.logo-container h1 {
+    padding: 0 0 0 0.5rem;
+    margin: auto 0;
+    color: white;
 }
 
 nav a {
@@ -33,3 +41,13 @@ nav a {
     text-decoration: none;
     font-weight: bold;
 }
+
+@media screen and (max-width: 576px) {
+    .nav-container nav a {
+        font-weight: 300;
+    }
+    .nav-container nav li {
+        padding: 0;
+        text-align: center;
+    }
+  }  
